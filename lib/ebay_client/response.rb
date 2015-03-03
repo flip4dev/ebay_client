@@ -1,6 +1,6 @@
 class EbayClient::Response
   class Exception < ::StandardError
-    cattr_accessor :code
+    attr_accessor :code
     attr_accessor :error
 
     def to_s
