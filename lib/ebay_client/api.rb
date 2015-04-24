@@ -30,7 +30,8 @@ class EbayClient::Api < ActiveSupport::BasicObject
     @calls += 1
     begin
       request.execute
-    rescue ::EbayClient::Response::Error.for_code('218050') => e
+    # rescue ::EbayClient::Response::Error.for_code('218050') => e
+    rescue ::EbayClient::Response::Error => e
       @configuration.next_key!
       request.execute
     end
