@@ -3,10 +3,10 @@ defaults: &defaults
   # use local file as default
   #wsdl_file: 'http://developer.ebay.com/webservices/893/eBaySvc.wsdl'
   routing: default
-  siteid: 0
+  siteid: 77
   preload: false
   warning_level: Low
-  error_language: en_US
+  error_language: de_DE
   api_keys: []
   savon_log_level: :debug
   http_read_timeout: 600
