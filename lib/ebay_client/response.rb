@@ -51,9 +51,10 @@ class EbayClient::Response
         code = code.to_s
 
         self.errors ||= Hash.new do |h, k|
-          h[k] = Class.new(EbayClient::Response::Exception).tap do |exception|
-            exception.code = k
-          end
+          h[k] = Class.new(EbayClient::Response::Exception) # .tap do |exception|
+          puts h[k].to_yaml
+            # exception.code = k
+          # end
         end
 
         errors[code]
